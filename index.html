@@ -17,7 +17,7 @@
     .nav-cta:hover { background: var(--color-sea-green); transform: var(--hover-lift); box-shadow: var(--shadow-cta-glow-hover); }
 
     .hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; padding: 140px 48px 80px; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; z-index: 0; background-image: url('https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1727730184/default/xiyebq224jxnaznvimfb.jpg'); background-size: cover; background-position: center; filter: saturate(1.1); }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; background-image: url('https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1fcb3989b0002fde652/1000009890.jpg'); background-size: cover; background-position: center; filter: saturate(1.1); }
     .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,15,26,0.55), rgba(10,15,26,0.75) 60%, var(--color-navy)); }
     .hero-bg::before { content: ''; position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse at 70% 30%, rgba(20,185,214,0.18), transparent 60%); }
     .hero-inner { position: relative; z-index: 2; max-width: 1160px; margin: 0 auto; width: 100%; }
@@ -69,17 +69,46 @@
     .statement-photo .chip-event { font-size: 13px; padding: 6px 14px; }
 
     .mega-masonry-section { padding: 80px 24px 120px; }
-    .mega-masonry-section .masonry { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 140px; gap: 8px; }
-    .mega-masonry-section .masonry .tile { position: relative; overflow: hidden; border-radius: 10px; background: var(--color-navy-light); margin: 0; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .mega-masonry-section .masonry {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 170px;
+      grid-auto-flow: dense;
+      gap: 8px;
+    }
+    .mega-masonry-section .masonry .tile {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background: var(--color-navy-light);
+      margin: 0;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
     .mega-masonry-section .masonry .tile.revealed { opacity: 1; transform: translateY(0); }
-    .mega-masonry-section .masonry .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; filter: brightness(0.95); }
+    .mega-masonry-section .masonry .tile img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      filter: brightness(0.95);
+    }
     .mega-masonry-section .masonry .tile:hover img { transform: scale(1.06); filter: brightness(1.05); }
-    .mega-masonry-section .masonry .tile figcaption { position: absolute; inset: auto 0 0 0; padding: 80px 12px 12px 12px; background: linear-gradient(to top, rgba(10,15,26,0.95), rgba(10,15,26,0.55) 60%, transparent); display: flex; flex-direction: column; gap: 6px; pointer-events: none; }
+    .mega-masonry-section .masonry .tile figcaption {
+      position: absolute; inset: auto 0 0 0;
+      padding: 80px 12px 12px 12px;
+      background: linear-gradient(to top, rgba(10,15,26,0.95), rgba(10,15,26,0.55) 60%, transparent);
+      display: flex; flex-direction: column; gap: 6px;
+      pointer-events: none;
+    }
     .chip-brand { display: inline-flex; align-items: center; align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-aqua); background: rgba(20,185,214,0.15); padding: 4px 10px; border-radius: 100px; border: 1px solid rgba(20,185,214,0.30); }
     .chip-event { display: inline-flex; align-items: center; align-self: flex-start; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.80); background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.10); }
 
     .cta { position: relative; padding: 140px 48px; overflow: hidden; }
-    .cta-bg { position: absolute; inset: 0; background-image: url('https://res.cloudinary.com/recess-live/image/upload/v1728789844/default/xqcryyi2tg2kknehensf.jpg'); background-size: cover; background-position: center; opacity: 0.30; }
+    .cta-bg { position: absolute; inset: 0; background-image: url('https://res.cloudinary.com/recess-live/image/upload/v1728881865/default/hyb5dejh76v5thtpsh1r.jpg'); background-size: cover; background-position: center; opacity: 0.30; }
     .cta-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(10,15,26,0.3), var(--color-navy) 85%); }
     .cta-inner { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; text-align: center; }
     .cta h2 { font-size: clamp(2.2rem, 4vw + 0.5rem, 4rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; margin: 24px 0 24px; }
@@ -90,10 +119,20 @@
     footer img { height: 22px; }
     footer small { color: rgba(255,255,255,0.40); font-size: 13px; }
 
-    @media (max-width: 1280px) {
-      .brand-card-grid { grid-template-columns: repeat(2, 1fr); }
-      .event-grid { grid-template-columns: repeat(3, 1fr); }
-      .mega-masonry-section .masonry { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 130px; }
+    
+    @media (max-width: 900px) {
+      .nav { padding: 14px 24px; }
+      .hero { padding: 110px 24px 60px; }
+      .stats, .cta { padding: 80px 24px; }
+      .stats-inner { grid-template-columns: 1fr; }
+      .statement-inner { padding: 0 24px; }
+      .statement-photo figcaption { bottom: 20px; left: 24px; }
+      .mega-masonry-section { padding: 60px 16px 80px; }
+      .mega-masonry-section .masonry .tile { flex: 1 1 calc(50% - 4px) !important; width: auto !important; height: 220px; }
+      footer { padding: 32px 24px; }
+    }
+      @media (max-width: 1280px) {
+      .mega-masonry-section .masonry { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 150px; }
       .mega-masonry-section .masonry .tile { grid-column: auto / span 1 !important; grid-row: auto / span 2 !important; }
       .mega-masonry-section .masonry .tile.tile-xl { grid-column: auto / span 4 !important; grid-row: auto / span 3 !important; }
       .mega-masonry-section .masonry .tile.tile-l { grid-column: auto / span 2 !important; grid-row: auto / span 3 !important; }
@@ -103,14 +142,12 @@
     @media (max-width: 900px) {
       .nav { padding: 14px 24px; }
       .hero { padding: 110px 24px 60px; }
-      .stats, .brand-lineup, .event-lineup, .cta { padding: 80px 24px; }
+      .stats, .cta { padding: 80px 24px; }
       .stats-inner { grid-template-columns: 1fr; }
-      .brand-card-grid { grid-template-columns: 1fr; }
-      .event-grid { grid-template-columns: repeat(2, 1fr); }
       .statement-inner { padding: 0 24px; }
       .statement-photo figcaption { bottom: 20px; left: 24px; }
       .mega-masonry-section { padding: 60px 16px 80px; }
-      .mega-masonry-section .masonry { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+      .mega-masonry-section .masonry { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
       .mega-masonry-section .masonry .tile,
       .mega-masonry-section .masonry .tile.tile-xl,
       .mega-masonry-section .masonry .tile.tile-l,
@@ -121,6 +158,7 @@
       .mega-masonry-section .masonry .tile.tile-l { grid-column: auto / span 2 !important; grid-row: auto / span 2 !important; }
       footer { padding: 32px 24px; }
     }
+
   </style>
 </head>
 <body>
@@ -135,61 +173,16 @@
     <div class="hero-inner">
       <span class="hero-label">Kraft Heinz × Recess</span>
       <h1>In the moments <em>that matter.</em></h1>
-      <p class="hero-sub">4 Kraft Heinz brands. 6 event categories. 1,800+ activations reaching consumers where they live, play, and eat.</p>
+      <p class="hero-sub">Multiple Kraft Heinz brands across 2,000+ activations — from university housing to K-8 schools, music festivals to malls — meeting consumers where they already live, play, and eat.</p>
       <div class="hero-ctas"><a href="#cta" class="btn-primary">See more activations →</a></div>
     </div>
   </header>
 
   <section class="stats">
     <div class="stats-inner">
-      <div class="stat"><div class="stat-num">1,804+</div><div class="stat-label">activations with Kraft Heinz brands</div></div>
+      <div class="stat"><div class="stat-num">2,000+</div><div class="stat-label">activations with Kraft Heinz brands</div></div>
       <div class="stat"><div class="stat-num">6</div><div class="stat-label">event categories, coast-to-coast</div></div>
       <div class="stat"><div class="stat-num">4</div><div class="stat-label">Kraft Heinz brands in the Recess network</div></div>
-    </div>
-  </section>
-
-  <section class="brand-lineup">
-    <div class="block-head">
-      <span class="block-label">The brands</span>
-      <h2 class="block-title">Four brands already sampling with Recess.</h2>
-    </div>
-    <div class="brand-card-grid">
-        <div class="brand-card">
-          <div class="brand-card-logo">
-            <img src="https://logo.clearbit.com/kraftmacandcheese.com" alt="Kraft Mac &amp; Cheese" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-name-fallback',textContent:'Kraft Mac &amp; Cheese'}));">
-          </div>
-          <div class="brand-card-meta">
-            <span class="brand-card-name">Kraft Mac &amp; Cheese</span>
-            <span class="brand-card-count">2,611 photos</span>
-          </div>
-        </div>
-        <div class="brand-card">
-          <div class="brand-card-logo">
-            <img src="https://logo.clearbit.com/kraftheinzcompany.com" alt="The Kraft Heinz Company" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-name-fallback',textContent:'The Kraft Heinz Company'}));">
-          </div>
-          <div class="brand-card-meta">
-            <span class="brand-card-name">The Kraft Heinz Company</span>
-            <span class="brand-card-count">1,236 photos</span>
-          </div>
-        </div>
-        <div class="brand-card">
-          <div class="brand-card-logo">
-            <img src="https://logo.clearbit.com/velveeta.com" alt="Velveeta" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-name-fallback',textContent:'Velveeta'}));">
-          </div>
-          <div class="brand-card-meta">
-            <span class="brand-card-name">Velveeta</span>
-            <span class="brand-card-count">512 photos</span>
-          </div>
-        </div>
-        <div class="brand-card">
-          <div class="brand-card-logo">
-            <img src="https://logo.clearbit.com/kraftheinz.com" alt="Kraft Heinz" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-name-fallback',textContent:'Kraft Heinz'}));">
-          </div>
-          <div class="brand-card-meta">
-            <span class="brand-card-name">Kraft Heinz</span>
-            <span class="brand-card-count">15 photos</span>
-          </div>
-        </div>
     </div>
   </section>
 
@@ -197,282 +190,190 @@
     <div class="statement-inner">
       <div class="block-head">
         <span class="block-label">In the wild</span>
-        <h2 class="block-title">Real moments. Real consumers. Real Kraft Heinz.</h2>
+        <h2 class="block-title">Real moments. Real consumers.</h2>
       </div>
     </div>
     <figure class="statement-photo">
-      <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1727730184/default/xiyebq224jxnaznvimfb.jpg" alt="The Kraft Heinz Company at University Housing" loading="lazy">
+      <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1f3b3989b0002fde650/1000009891.jpg" alt="Comic Con" loading="lazy">
       <figcaption>
-        <span class="chip-event">University Housing</span>
+        <span class="chip-event">Comic Con</span>
       </figcaption>
     </figure>
   </section>
 
   <section id="activations" class="mega-masonry-section">
     <div class="masonry">
-        <figure class="tile tile-wide" data-brand="Kraft Heinz" data-event="student_involvement" data-reveal style="grid-column: 1 / span 2; grid-row: 1 / span 2;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d237d9b85200024b50db/40.jpg" alt="Kraft Heinz at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-xl" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: span 3; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d444d9b85200024b50f0/93.jpeg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
-        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: 3 / span 2; grid-row: 1 / span 4;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d422d9b85200024b50e4/27.jpg" alt="Kraft Mac &amp; Cheese at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263645/default/ptpwu3gfph9xvnakpnwr.jpg" alt="E-Sports" loading="lazy">
+          <figcaption><span class="chip-event">E-Sports</span></figcaption>
         </figure>
-        <figure class="tile tile-xl" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: 1 / span 3; grid-row: 5 / span 4;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d42fd9b85200024b50e7/37.jpg" alt="Kraft Mac &amp; Cheese at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d437d9b85200024b50ea/68.jpg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Heinz" data-event="student_involvement" data-reveal style="grid-column: 5 / span 1; grid-row: 1 / span 2;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d0aad9b85200024b50c7/13.jpg" alt="Kraft Heinz at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951456/default/her4ggwrrssvzhz2tfds.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Heinz" data-event="student_involvement" data-reveal style="grid-column: 6 / span 1; grid-row: 1 / span 2;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d22fd9b85200024b50d8/30.jpg" alt="Kraft Heinz at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1768466797/default/fybpxuvvrujxappyo7ga.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: 5 / span 1; grid-row: 3 / span 4;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d437d9b85200024b50ea/68.jpg" alt="Kraft Mac &amp; Cheese at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263645/default/wlz0byje2plwdjof6wdh.jpg" alt="E-Sports" loading="lazy">
+          <figcaption><span class="chip-event">E-Sports</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: 1 / span 1; grid-row: 3 / span 2;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d43ad9b85200024b50eb/75.jpg" alt="Kraft Mac &amp; Cheese at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263646/default/bxm8alvq8uq4jaci6lyn.jpg" alt="E-Sports" loading="lazy">
+          <figcaption><span class="chip-event">E-Sports</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: 2 / span 1; grid-row: 3 / span 2;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d42cd9b85200024b50e6/29.jpg" alt="Kraft Mac &amp; Cheese at Student Involvement" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Student Involvement</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881863/default/tzztka2neuoq4e8uh5hk.jpg" alt="Music Festivals" loading="lazy">
+          <figcaption><span class="chip-event">Music Festivals</span></figcaption>
         </figure>
-        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 4 / span 2; grid-row: 7 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951448/default/r0gmebpzcpg11e5fpgfc.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881863/default/jgzbkqd9fxogqfyng1bt.jpg" alt="Music Festivals" loading="lazy">
+          <figcaption><span class="chip-event">Music Festivals</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 6 / span 1; grid-row: 3 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1724438723/default/uptmtvkryt9kxsjpogb2.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722952264/default/x7wajedad3ni8iz1lpci.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 6 / span 1; grid-row: 5 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951456/default/her4ggwrrssvzhz2tfds.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1b7b3989b0002fde648/1000009889.jpg" alt="Comic Con" loading="lazy">
+          <figcaption><span class="chip-event">Comic Con</span></figcaption>
         </figure>
-        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 1 / span 2; grid-row: 9 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1724438723/default/p2zuiynuijqljer98lxy.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-xl" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: span 3; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881865/default/rdc8v6twbptwcwkgkwkh.jpg" alt="Music Festivals" loading="lazy">
+          <figcaption><span class="chip-event">Music Festivals</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 4 / span 1; grid-row: 5 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722952264/default/x7wajedad3ni8iz1lpci.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1760394421/default/xzi5n0f0r0emvwhiujmt.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 3 / span 1; grid-row: 9 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1724438724/default/osrjwu2tjbwvbpxbprlv.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d442d9b85200024b50ef/91.jpeg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
-        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 1 / span 2; grid-row: 11 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1724438723/default/fifj74bxnnygryzrdv7f.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263646/default/w9zwiv2qdqvdxqhvvcnd.jpg" alt="E-Sports" loading="lazy">
+          <figcaption><span class="chip-event">E-Sports</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: 6 / span 1; grid-row: 9 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951446/default/wshsogdkhdqbs8c2r3vj.jpg" alt="Kraft Mac &amp; Cheese at Malls" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Malls</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951455/default/vrkmjgzuvvhq9gunixh4.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Velveeta" data-event="music_festival" data-reveal style="grid-column: 4 / span 1; grid-row: 11 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1758764520/default/lyebt5hv4fsednnwvq0a.jpg" alt="Velveeta at Music Festivals" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Music Festivals</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881864/default/jsymbaltkdlc7bbqiyxh.jpg" alt="Music Festivals" loading="lazy">
+          <figcaption><span class="chip-event">Music Festivals</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Velveeta" data-event="music_festival" data-reveal style="grid-column: 5 / span 1; grid-row: 11 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1749771960/default/xslvt1b9wyhytz7pum0a.jpg" alt="Velveeta at Music Festivals" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Music Festivals</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1760394388/default/elaqzteradjnkzhtn2b4.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: 1 / span 1; grid-row: 13 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728789843/default/sqceimzy81bkdqujyyjx.jpg" alt="Kraft Mac &amp; Cheese at Music Festivals" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Music Festivals</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263645/default/bnlnzrtg2tqlc25wf8bx.jpg" alt="E-Sports" loading="lazy">
+          <figcaption><span class="chip-event">E-Sports</span></figcaption>
         </figure>
-        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: 2 / span 2; grid-row: 13 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881865/default/rdc8v6twbptwcwkgkwkh.jpg" alt="Kraft Mac &amp; Cheese at Music Festivals" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Music Festivals</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d441d9b85200024b50ee/90.jpeg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: 4 / span 1; grid-row: 13 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881861/default/ctfnvkmuwdwobit0dbbz.jpg" alt="Kraft Mac &amp; Cheese at Music Festivals" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Music Festivals</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1768466797/default/o1cjsrhenx40tkvuu3by.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: 5 / span 1; grid-row: 13 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1728061625/default/jtt2mk1jnpivjzsgoapw.jpg" alt="Kraft Mac &amp; Cheese at Music Festivals" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Music Festivals</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1760394388/default/mkxwabcehdxt2ofivune.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Velveeta" data-event="music_festival" data-reveal style="grid-column: 6 / span 1; grid-row: 13 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1758764518/default/goux4bmk8jua7mbzy6in.jpg" alt="Velveeta at Music Festivals" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Music Festivals</span>
-          </figcaption>
+        <figure class="tile tile-xl" data-brand="Kraft Heinz" data-event="student_involvement" data-reveal style="grid-column: span 3; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d237d9b85200024b50db/40.jpg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="university_housing" data-reveal style="grid-column: 1 / span 1; grid-row: 15 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1724177394/default/qqn9xmii4xx90ayy55fk.jpg" alt="The Kraft Heinz Company at University Housing" loading="lazy">
-          <figcaption>
-            <span class="chip-event">University Housing</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1727395762/default/vmm0fesb7qtn4hrasxjo.jpg" alt="Comic Con" loading="lazy">
+          <figcaption><span class="chip-event">Comic Con</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="university_housing" data-reveal style="grid-column: 2 / span 1; grid-row: 15 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1730226074/default/lrtinyhktcp6nnvjish5.jpg" alt="The Kraft Heinz Company at University Housing" loading="lazy">
-          <figcaption>
-            <span class="chip-event">University Housing</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881865/default/krd6hjkd1zubghjexbpw.jpg" alt="Music Festivals" loading="lazy">
+          <figcaption><span class="chip-event">Music Festivals</span></figcaption>
         </figure>
-        <figure class="tile tile-wide" data-brand="Velveeta" data-event="university_housing" data-reveal style="grid-column: 1 / span 2; grid-row: 17 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1758042254/default/iwc1ucieo0qkpjmbqgtu.jpg" alt="Velveeta at University Housing" loading="lazy">
-          <figcaption>
-            <span class="chip-event">University Housing</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d440d9b85200024b50ed/89.jpeg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Velveeta" data-event="university_housing" data-reveal style="grid-column: 3 / span 1; grid-row: 15 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1758056124/default/vypli3dkc5u6wsoswcsa.jpg" alt="Velveeta at University Housing" loading="lazy">
-          <figcaption>
-            <span class="chip-event">University Housing</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1724438724/default/osrjwu2tjbwvbpxbprlv.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: 4 / span 1; grid-row: 17 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1757972298/default/pdnvu0taz5s1hjkkpguu.jpg" alt="Kraft Mac &amp; Cheese at University Housing" loading="lazy">
-          <figcaption>
-            <span class="chip-event">University Housing</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722952264/default/hifvsygnkc3dwpne0x7q.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: 5 / span 1; grid-row: 17 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1757089426/default/mmd8b9t5bvn4z83naw40.jpg" alt="Kraft Mac &amp; Cheese at University Housing" loading="lazy">
-          <figcaption>
-            <span class="chip-event">University Housing</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1760394388/default/pfjfcfy6v4jkirewbmsz.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="Velveeta" data-event="university_housing" data-reveal style="grid-column: 6 / span 1; grid-row: 17 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/v1757719029/default/mquambns6nnh8vvo7vet.jpg" alt="Velveeta at University Housing" loading="lazy">
-          <figcaption>
-            <span class="chip-event">University Housing</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1727395763/default/isdgw6wzc4piiwseznb7.jpg" alt="Comic Con" loading="lazy">
+          <figcaption><span class="chip-event">Comic Con</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 1 / span 1; grid-row: 19 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1727395762/default/vmm0fesb7qtn4hrasxjo.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881865/default/hk1flpn4zv4luzr6g32p.jpg" alt="Music Festivals" loading="lazy">
+          <figcaption><span class="chip-event">Music Festivals</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 2 / span 1; grid-row: 19 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1726352084/default/yg709gricnkzzbk3d8jc.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="music_festival" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1728881863/default/okfqbw8vfpu0yeqfpb17.jpg" alt="Music Festivals" loading="lazy">
+          <figcaption><span class="chip-event">Music Festivals</span></figcaption>
         </figure>
-        <figure class="tile tile-l" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 5 / span 2; grid-row: 19 / span 4;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1e7b3989b0002fde64f/1000009892.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1768466796/default/wu5y5ol8qmru7sqswyle.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 3 / span 1; grid-row: 19 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1726352087/default/re3vvt5d1fnjkw5euvxt.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-xl" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: span 3; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1d0b3989b0002fde64d/1000009893.jpg" alt="Comic Con" loading="lazy">
+          <figcaption><span class="chip-event">Comic Con</span></figcaption>
         </figure>
-        <figure class="tile tile-l" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 1 / span 2; grid-row: 21 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1726352079/default/r57sayvmtpqi3udtsbbl.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263666/default/m4pa1lya0v2jbrraem6v.jpg" alt="E-Sports" loading="lazy">
+          <figcaption><span class="chip-event">E-Sports</span></figcaption>
         </figure>
-        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 3 / span 1; grid-row: 21 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1726352076/default/qhbbkfpvn4dmfqq1egpd.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951453/default/hhsy7e4jua8wetmjtncp.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-l" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 3 / span 2; grid-row: 23 / span 4;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1d0b3989b0002fde64d/1000009893.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-l" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: span 2; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1ddb3989b0002fde64e/1000009894.jpg" alt="Comic Con" loading="lazy">
+          <figcaption><span class="chip-event">Comic Con</span></figcaption>
         </figure>
-        <figure class="tile tile-wide" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: 5 / span 2; grid-row: 23 / span 2;">
-          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1b7b3989b0002fde648/1000009889.jpg" alt="The Kraft Heinz Company at Comic Con" loading="lazy">
-          <figcaption>
-            <span class="chip-event">Comic Con</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="comic_con" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/665df1e7b3989b0002fde64f/1000009892.jpg" alt="Comic Con" loading="lazy">
+          <figcaption><span class="chip-event">Comic Con</span></figcaption>
         </figure>
-        <figure class="tile tile-wide" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: 1 / span 2; grid-row: 25 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263646/default/bxm8alvq8uq4jaci6lyn.jpg" alt="The Kraft Heinz Company at E-Sports" loading="lazy">
-          <figcaption>
-            <span class="chip-event">E-Sports</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951448/default/r0gmebpzcpg11e5fpgfc.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-wide" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: 5 / span 2; grid-row: 25 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263646/default/w9zwiv2qdqvdxqhvvcnd.jpg" alt="The Kraft Heinz Company at E-Sports" loading="lazy">
-          <figcaption>
-            <span class="chip-event">E-Sports</span>
-          </figcaption>
+        <figure class="tile tile-s" data-brand="Kraft Macaroni &amp; Cheese" data-event="university_housing" data-reveal style="grid-column: span 1; grid-row: span 2;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/v1760394388/default/uocapbcjxciqjprigpgo.jpg" alt="University Housing" loading="lazy">
+          <figcaption><span class="chip-event">University Housing</span></figcaption>
         </figure>
-        <figure class="tile tile-m" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: 1 / span 1; grid-row: 27 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263645/default/ptpwu3gfph9xvnakpnwr.jpg" alt="The Kraft Heinz Company at E-Sports" loading="lazy">
-          <figcaption>
-            <span class="chip-event">E-Sports</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="mall" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722951446/default/wshsogdkhdqbs8c2r3vj.jpg" alt="Malls" loading="lazy">
+          <figcaption><span class="chip-event">Malls</span></figcaption>
         </figure>
-        <figure class="tile tile-xl" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: 2 / span 3; grid-row: 27 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263666/default/m4pa1lya0v2jbrraem6v.jpg" alt="The Kraft Heinz Company at E-Sports" loading="lazy">
-          <figcaption>
-            <span class="chip-event">E-Sports</span>
-          </figcaption>
+        <figure class="tile tile-wide" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: span 2; grid-row: span 2;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d43dd9b85200024b50ec/85.jpg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
-        <figure class="tile tile-l" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: 5 / span 2; grid-row: 27 / span 4;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263645/default/wlz0byje2plwdjof6wdh.jpg" alt="The Kraft Heinz Company at E-Sports" loading="lazy">
-          <figcaption>
-            <span class="chip-event">E-Sports</span>
-          </figcaption>
-        </figure>
-        <figure class="tile tile-s" data-brand="The Kraft Heinz Company" data-event="e_sports" data-reveal style="grid-column: 4 / span 1; grid-row: 21 / span 2;">
-          <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1722263645/default/bnlnzrtg2tqlc25wf8bx.jpg" alt="The Kraft Heinz Company at E-Sports" loading="lazy">
-          <figcaption>
-            <span class="chip-event">E-Sports</span>
-          </figcaption>
+        <figure class="tile tile-m" data-brand="Kraft Macaroni &amp; Cheese" data-event="student_involvement" data-reveal style="grid-column: span 1; grid-row: span 4;">
+          <img src="https://marketplace-live-ugc.s3.amazonaws.com/promotable_photo/6669d43ad9b85200024b50eb/75.jpg" alt="Student Involvement" loading="lazy">
+          <figcaption><span class="chip-event">Student Involvement</span></figcaption>
         </figure>
     </div>
   </section>
@@ -489,7 +390,7 @@
 
   <footer>
     <img src="logo-icon-white.png" alt="Recess">
-    <small>© Recess · Kraft Heinz Partnership · 1,804+ activations · 6 event categories · 4 brands</small>
+    <small>© Recess · Kraft Heinz Partnership · 2,000+ activations · 6 event categories · 4 brands</small>
   </footer>
 
   <script>
